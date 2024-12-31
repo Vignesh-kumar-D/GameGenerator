@@ -39,26 +39,28 @@ const Prompt: React.FC<PromptProps> = ({ onSubmit }) => {
       <label htmlFor="gamePrompt" className={styles.label}>
         Write your game prompt
       </label>
-      <div className={styles.textareaWrapper}>
-        <textarea
-          id="gamePrompt"
-          ref={textareaRef}
-          value={prompt}
-          onChange={handleChange}
-          className={styles.promptTextarea}
-          placeholder="Describe the game you want to create..."
-          required
-          aria-label="Game prompt"
-        />
-      </div>
-      <div className={styles.submitButtonWrapper}>
-        <button
-          type="submit"
-          className={styles.submitButton}
-          disabled={!prompt.trim()}
-        >
-          Generate Game
-        </button>
+      <div className={styles.formContainer}>
+        <div className={styles.textareaWrapper}>
+          <textarea
+            id="gamePrompt"
+            ref={textareaRef}
+            value={prompt}
+            onChange={handleChange}
+            className={styles.promptTextarea}
+            placeholder="Describe the game you want to create..."
+            required
+            aria-label="Game prompt"
+          />
+        </div>
+        <div className={styles.submitButtonWrapper}>
+          <button
+            type="submit"
+            className={styles.submitButton}
+            disabled={!prompt.trim()}
+          >
+            Generate Game
+          </button>
+        </div>
       </div>
     </form>
   );
