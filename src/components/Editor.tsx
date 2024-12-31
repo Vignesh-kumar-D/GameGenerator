@@ -76,7 +76,7 @@ const Editor: React.FC<EditorProps> = ({ onCodeChange, javascriptCode }) => {
           srcDoc={srcDoc}
           title="preview"
           sandbox="allow-scripts"
-          style={{ width: '100%', height: '100%', border: 'none' }}
+          className={styles.previewIframe}
         />
       </div>
     </div>

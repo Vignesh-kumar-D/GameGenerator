@@ -7,7 +7,6 @@ export const getSrc = (code: string) => `
     <style>
       body {
         margin: 0;
-        padding: 16px;
         font-family: Arial, sans-serif;
       }
       .error {
