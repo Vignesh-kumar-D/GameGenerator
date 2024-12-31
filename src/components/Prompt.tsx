@@ -44,6 +44,7 @@ const Prompt: React.FC<PromptProps> = ({ onSubmit }) => {
           <textarea
             id="gamePrompt"
             ref={textareaRef}
+            disabled={true}
             value={prompt}
             onChange={handleChange}
             className={styles.promptTextarea}
