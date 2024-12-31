@@ -11,7 +11,7 @@
   display: flex;
   width: 100%;
   /* Mobile: height is 60vh */
-  height: 60vh;
+  height: 30vh;
   background-color: #282c34;
   border: 1px solid #e5e7eb;
   border-radius: 0.375rem;
@@ -44,6 +44,7 @@
 
 .previewIframe {
   flex: 1;
+  height: 30vh;
   max-width: 100%;
   max-height: 100%;
   border: none;
