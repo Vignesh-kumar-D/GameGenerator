@@ -5,9 +5,8 @@ import Editor from './components/Editor';
 import Prompt from './components/Prompt';
 
 function App() {
-  const [javascriptCode, setJavascriptCode] = useState(
-    '// write your javascript code here'
-  );
+  const initialCode = '// write your javascript code here \n';
+  const [javascriptCode, setJavascriptCode] = useState(initialCode);
   const handleCodeChange = (newCode: string): void => {
     setJavascriptCode(newCode);
   };
