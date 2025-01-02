@@ -3,12 +3,13 @@
   flex-direction: column;
   width: 100%;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 0.2rem;
 }
 
 .editorPane {
   display: flex;
   width: 100%;
+
   /* Mobile: height is 60vh */
   height: 30vh;
   background-color: #282c34;
@@ -53,13 +54,14 @@
 /* Tablet */
 @media (min-width: 768px) {
   .editorContainer {
+    margin-top: 2rem;
     flex-direction: row;
     padding: 0 1.5rem 1.5rem;
   }
 
   .editorPane {
     flex: 0.45;
-    max-width: 60vh;
+    max-width: 30vh;
     /* Tablet: height is 50vh */
     height: 50vh;
   }
@@ -82,7 +84,6 @@
     /* Desktop: height is 45vh */
     height: 55vh;
   }
-
   .previewPane {
     /* Desktop: height is 45vh */
     height: 55vh;
