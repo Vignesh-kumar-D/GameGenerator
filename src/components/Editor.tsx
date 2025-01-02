@@ -80,7 +80,7 @@ const Editor: React.FC<EditorProps> = ({
         <iframe
           srcDoc={srcDoc}
           title="preview"
-          sandbox="allow-scripts"
+          sandbox="allow-scripts allow-same-origin"
           className={styles.previewIframe}
         />
       </div>

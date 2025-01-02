@@ -61,7 +61,7 @@
 
   .editorPane {
     flex: 0.45;
-    max-width: 30vh;
+    max-width: 70vh;
     /* Tablet: height is 50vh */
     height: 50vh;
   }
