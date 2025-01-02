@@ -1,9 +1,20 @@
-export const getSrc = (code: string) => `
+export interface Library {
+  id: string;
+  name: string;
+  cdn: string;
+}
+export const getSrc = (code: string, selectedLibraries: Library[]) => {
+  const libraryScripts = selectedLibraries
+    .map((lib) => `<script src="${lib.cdn}"></script>`)
+    .join('\n');
+
+  return `
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ${libraryScripts}
     <style>
       body {
         margin: 0;
@@ -44,3 +55,4 @@ export const getSrc = (code: string) => `
   </body>
 </html>
 `;
+};

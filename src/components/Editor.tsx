@@ -3,14 +3,19 @@ import { EditorView, basicSetup } from 'codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { oneDark } from '@codemirror/theme-one-dark';
 import styles from './Editor.module.css';
-import { getSrc } from '../utils/utils';
+import { getSrc, Library } from '../utils/utils';
 
 interface EditorProps {
   onCodeChange: (code: string) => void;
   javascriptCode: string;
+  selectedLibraries: Library[];
 }
 
-const Editor: React.FC<EditorProps> = ({ onCodeChange, javascriptCode }) => {
+const Editor: React.FC<EditorProps> = ({
+  onCodeChange,
+  javascriptCode,
+  selectedLibraries,
+}) => {
   const [srcDoc, setSrcDoc] = useState<string>('');
   const editorRef = useRef<HTMLDivElement>(null);
   const viewRef = useRef<EditorView>();
@@ -59,12 +64,12 @@ const Editor: React.FC<EditorProps> = ({ onCodeChange, javascriptCode }) => {
   // Debounced preview update
   useEffect(() => {
     const timer = setTimeout(() => {
-      const html = getSrc(javascriptCode);
+      const html = getSrc(javascriptCode, selectedLibraries);
       setSrcDoc(html);
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, [javascriptCode]);
+  }, [javascriptCode, selectedLibraries]);
 
   return (
     <div className={styles.editorContainer}>

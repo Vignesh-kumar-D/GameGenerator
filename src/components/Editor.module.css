@@ -3,7 +3,6 @@
   flex-direction: column;
   width: 100%;
   gap: 1rem;
-  padding: 0 1rem 1rem;
   margin-top: 2rem;
 }
 
@@ -13,7 +12,7 @@
   /* Mobile: height is 60vh */
   height: 30vh;
   background-color: #282c34;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #b5b7b9;
   border-radius: 0.375rem;
 }
 
@@ -60,12 +59,18 @@
 
   .editorPane {
     flex: 0.45;
+    max-width: 60vh;
     /* Tablet: height is 50vh */
     height: 50vh;
   }
 
   .previewPane {
-    flex: 0.55;
+    flex: 1;
+    /* Tablet: height is 50vh */
+    height: 50vh;
+  }
+  .previewIframe {
+    flex: 1;
     /* Tablet: height is 50vh */
     height: 50vh;
   }
