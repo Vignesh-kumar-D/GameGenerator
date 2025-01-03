@@ -79,8 +79,9 @@ const Editor: React.FC<EditorProps> = ({
       <div className={styles.previewPane}>
         <iframe
           srcDoc={srcDoc}
+          allow="accelerometer *; bluetooth *; camera *; encrypted-media *; display-capture *; geolocation *; gyroscope *; microphone *; midi *; clipboard-read *; clipboard-write *; web-share *; serial *; xr-spatial-tracking *"
           title="preview"
-          sandbox="allow-scripts allow-same-origin"
+          sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups-to-escape-sandbox allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
           className={styles.previewIframe}
         />
       </div>
